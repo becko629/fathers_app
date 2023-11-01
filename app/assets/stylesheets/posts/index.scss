@@ -1,0 +1,60 @@
+.main {
+  background: #FFFFFF;
+}
+
+.title-contents {
+  width: 100%;
+  background-image: image-url('sky_00010.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 15vw;
+  margin-top: 30px;
+  margin-right: 10px;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.service-title {
+  font-size: 5vh;
+}
+
+.service-explain {
+  font-size: 3vh;
+  line-height: 5px;
+}
+
+
+
+.posts-contents{
+  display: flex;
+  justify-content: center;
+  margin:50px 0 50px 0;
+}
+
+.posts-title{
+  width: 80vw;
+  height: 80vh;
+  background-color: #EEEEEE;
+  border-radius: 10px;
+
+}
+
+.posts-list{
+  width: 100vw;
+  margin-right: 10vw;
+  font-size: 20px;
+  color:black;
+  text-decoration: none;
+  border: solid 2px;
+  padding: 1px 30px 1px 30px;
+  text-align:  center;
+  border-radius: 10px;
+  border-color: #00FFFF;
+  background-color: #FFFFFF;
+}
+
