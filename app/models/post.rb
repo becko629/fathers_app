@@ -9,6 +9,7 @@ class Post < ApplicationRecord
 
   validates :title, presence: true
   validates :text, presence: true
-  validates :category_id, numericality: { other_than: 1, message: "can't be blank" }
+  validates :category_id, numericality: { other_than: 1, message: "can't be blank" }, allow_blank: true
+  validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }, allow_blank: true
 
 end
