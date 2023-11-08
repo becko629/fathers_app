@@ -33,10 +33,10 @@
 .nav {
   font-size: 18px;
   display: flex;
-  justify-content:end;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  padding-bottom: 20px;
+  padding: 1vh 0;
 }
 
 .category-list {
@@ -54,6 +54,12 @@
   display: flex;
   list-style: none;
   align-items: flex-end;
+}
+
+.lists-left {
+  display: flex;
+  min-width: 200px;
+
 }
 
 

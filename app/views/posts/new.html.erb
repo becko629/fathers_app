@@ -6,11 +6,11 @@
     <%= form_with(model: @post, local: true) do |form| %>
       <%= form.text_field :title, placeholder: "タイトル" %>
       <%= form.text_area :text, placeholder: "投稿内容", rows: "5" %>
-      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-      <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
-      <%= form.text_field :image, placeholder: "画像" %>
+      <%= form.file_field :image, placeholder: "画像" %>
+      <%= form.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"post-category"}) %>
+      <%= form.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"post-prefecture"}) %>
       
-      <%= form.submit "SEND" %>
+      <%= form.submit "投稿する" %>
     <% end %>
   </div>
 </div>
