@@ -77,9 +77,18 @@
 .post-title{
   font-size: 20px;
   padding-left: 15px;
+  display: flex;
+  justify-content:left;
 }
 
 .post-text{
   font-size: 13px;
   padding-left: 50px;
+}
+
+.post-category{
+  font-size: 13px;
+  padding: 5px 15px 0 15px;
+  margin-left: 50px;
+  border: 3px double;
 }
