@@ -20,6 +20,7 @@
 
    <% @posts.each do |post| %>
     <div class="post">
+    <%= link_to post_path(post.id), class: "post-show" do %>
     <div class="post-date">
       <div class="date-time">
       <%= post.created_at.strftime('%Y/%m/%d %H:%M') %>
@@ -35,6 +36,7 @@
         </div>
       </div>
       </div>
+   <% end %>
    <% end %>
 
   </div>
