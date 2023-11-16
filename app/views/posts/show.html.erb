@@ -1,1 +1,24 @@
 <%= render "shared/second-header" %>
+
+    <div class="show-post">
+        <div class="show-date">
+          <div class="date-time">
+          <%= @post.created_at.strftime('%Y/%m/%d %H:%M') %>
+          </div>
+          <%= image_tag @post.image, class: "show-image" if @post.image.attached? %>
+          <div class="show-title">
+            <%= @post.title.truncate(30) %>
+          </div>
+            <div class="show-category">
+              <%= @post.category.name %>
+            </div>
+            <div class="show-text">
+              ・<%= @post.text.truncate(100) %>
+            </div>
+            <div class="show-prefecture">
+              <%= @post.prefecture.name%>
+            </div>
+          </div>
+    </div>
+
+    <%= render "shared/footer" %>
