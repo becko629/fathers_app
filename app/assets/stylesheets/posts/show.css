@@ -46,3 +46,13 @@
   color:gray;
   margin-bottom: 30px;
 }
+
+.show-list{
+  text-decoration: none;
+  margin-left: 1vw;
+  color: #333333;
+  border: 3px solid;
+  padding: 0 15px 0 15px;
+  display: flex;
+  justify-content: end;
+}
