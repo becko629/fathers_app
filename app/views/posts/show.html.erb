@@ -6,7 +6,7 @@
           <div class="date-time">
           <%= @post.created_at.strftime('%Y/%m/%d %H:%M') %>
           </div>
-            <% if user_signed_in? %>
+            <% if user_signed_in? && current_user.id == @post.user_id %>
             <ul class='lists-right'>
               <li><%= link_to '削除', "#", class: "show-list" %></li>
               <li><%= link_to '編集', "#", class: "show-list" %></li>
