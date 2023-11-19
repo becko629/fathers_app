@@ -1,10 +1,19 @@
-<%= render "shared/second-header" %>
+<%= render "shared/show-header" %>
 
     <div class="show-post">
         <div class="show-date">
+         <div class='nav'>
           <div class="date-time">
           <%= @post.created_at.strftime('%Y/%m/%d %H:%M') %>
           </div>
+            <% if user_signed_in? %>
+            <ul class='lists-right'>
+              <li><%= link_to '削除', "#", class: "show-list" %></li>
+              <li><%= link_to '編集', "#", class: "show-list" %></li>
+            </ul>
+              <% end %>
+    </div>
+
           <%= image_tag @post.image, class: "show-image" if @post.image.attached? %>
           <div class="show-title">
             <%= @post.title.truncate(30) %>
