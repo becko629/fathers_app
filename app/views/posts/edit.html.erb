@@ -1,0 +1,17 @@
+<%= render "shared/second-header" %>
+
+<div class="contents row">
+  <div class="container">
+    <h3>投稿を編集</h3>
+    <%= form_with(model: @post, local: true) do |form| %>
+      <%= form.text_field :title, placeholder: "タイトル" %>
+      <%= form.text_area :text, placeholder: "投稿内容", rows: "5" %>
+      <%= form.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"post-category"}) %>
+      <%= form.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"post-prefecture"}) %>
+      
+      <%= form.submit "編集完了" %>
+    <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

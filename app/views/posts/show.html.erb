@@ -9,7 +9,7 @@
             <% if user_signed_in? && current_user.id == @post.user_id %>
             <ul class='lists-right'>
               <li><%= link_to '削除', "#", class: "show-list" %></li>
-              <li><%= link_to '編集', "#", class: "show-list" %></li>
+              <li><%= link_to '編集', edit_post_path, class: "show-list" %></li>
             </ul>
               <% end %>
     </div>
