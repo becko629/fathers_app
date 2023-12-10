@@ -31,7 +31,20 @@
     </div>
            <div class="button">
             <%= link_to 'お気に入り', "#", class: "button-064" %>
-            <%= link_to 'コメント', "#", class: "button-002" %>
+            <%= link_to 'コメント', new_post_comment_path(@post.id), class: "button-002" %>
+     <%# コメント一覧表示%>
+             <div class="comments">
+      <h4 class= "comments-title">
+      コメント一覧
+      </h4>
+      <% @comments.each do |comment| %>
+        <p>
+          <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}", class: "comment-user" %>:</strong>
+          <%= comment.comment_text %>
+        </p>
+      <% end %>
+    </div>
+    <%# コメント一覧表示%>
           </div>
 
     <%= render "shared/footer" %>
