@@ -106,3 +106,18 @@
 .button{
   margin-bottom: 30px;
 }
+
+.comments-title{
+  font-size: 33px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+}
+
+.comment-user{
+  text-decoration: none;
+  font-size: 25px;
+  color: blue;
+
+}

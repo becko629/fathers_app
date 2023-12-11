@@ -1,19 +1,16 @@
 class CommentsController < ApplicationController
 
-  before_action :authenticate_user!, except:[:index]
-
-  def index
-    @comments = Comment.all.order(created_at: :desc)
-  end
+  before_action :authenticate_user!
 
   def new
     @comment = Comment.new
+    @post = params[:post_id]
   end
 
   def create
-    @comment = Comment.new(comment_params)
+    @comment = Comment.create(comment_params)
     if @comment.save
-      redirect_to root_path
+      redirect_to "/posts/#{@comment.post.id}"
     else
       render :new
     end
