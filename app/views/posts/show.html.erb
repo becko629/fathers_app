@@ -33,17 +33,19 @@
             <%= link_to 'お気に入り', "#", class: "button-064" %>
             <%= link_to 'コメント', new_post_comment_path(@post.id), class: "button-002" %>
      <%# コメント一覧表示%>
-             <div class="comments">
+  <div class="comments">
       <h4 class= "comments-title">
       コメント一覧
       </h4>
+       <div class="comment-show">
       <% @comments.each do |comment| %>
         <p>
-          <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}", class: "comment-user" %>:</strong>
-          <%= comment.comment_text %>
+          <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}", class: "comment-user" %></strong>
+          <br><%= comment.comment_text %>
         </p>
       <% end %>
-    </div>
+       </div>
+  </div>
     <%# コメント一覧表示%>
           </div>
 

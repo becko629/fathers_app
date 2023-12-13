@@ -23,10 +23,10 @@ end
       @comment.valid?
       expect(@comment.errors.full_messages).to include include("Comment text can't be blank")
     end
-    it 'commentは30文字以上ではコメントできない' do
-      @comment.comment_text = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+    it 'commentは150文字以上ではコメントできない' do
+      @comment.comment_text = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
       @comment.valid?
-      expect(@comment.errors.full_messages).to include include("Comment text is too long (maximum is 30 characters)")
+      expect(@comment.errors.full_messages).to include include("Comment text is too long (maximum is 150 characters)")
     end
   end
 end
