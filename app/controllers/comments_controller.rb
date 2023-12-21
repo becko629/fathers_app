@@ -16,6 +16,13 @@ class CommentsController < ApplicationController
     end
   end
 
+  def edit
+    @post = Post.find(params[:post_id])
+    @comment = Comment.find(params[:id])
+    return unless current_user.id != @comment.user_id
+    redirect_to "/posts/#{@comment.post.id}"
+  end
+
 
   private
   def comment_params
