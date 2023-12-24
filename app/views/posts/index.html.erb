@@ -24,6 +24,7 @@
     <div class="post-date">
       <div class="date-time">
       <%= post.created_at.strftime('%Y/%m/%d %H:%M') %>
+      <%= post.user.nickname%>
       </div>
       <div class="post-title">
         ■<%= post.title.truncate(20) %>

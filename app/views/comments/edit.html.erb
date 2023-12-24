@@ -1,0 +1,14 @@
+<%= render "shared/second-header" %>
+  <div class="contents row">
+  <div class="container">
+    <h3>コメントを編集</h3>
+    <%= form_with(model: [@post, @comment], local: true) do |form| %>
+    <%= render 'shared/error_messages', model: form.object %>
+      <%= form.text_area :comment_text, placeholder: "コメント", rows: "5" %>
+      
+      <%= form.submit "編集完了" %>
+    <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

@@ -4,6 +4,7 @@
         <div class="show-date">
          <div class='nav'>
           <div class="date-time">
+          <%= @post.user.nickname%>
           <%= @post.created_at.strftime('%Y/%m/%d %H:%M') %>
           </div>
             <% if user_signed_in? && current_user.id == @post.user_id %>
@@ -41,7 +42,7 @@
       <% @comments.each do |comment| %>
         <p>
           <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}", class: "comment-user" %></strong>
-          <br><%= comment.comment_text %>
+          <br><%= link_to comment.comment_text, edit_post_comment_path(@post,comment) %>
         </p>
       <% end %>
        </div>
