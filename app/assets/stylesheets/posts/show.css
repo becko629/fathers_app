@@ -125,3 +125,25 @@
 .comment-show{
   margin: 0 300px 100px 300px;
 }
+
+.destroy-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin:0 auto;
+  padding: 10px;
+  border: none;
+  border-radius: 23px;
+  background-color: #ff0202;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 20px;
+  text-decoration: none;
+  font-family: "游ゴシック", "YuGothic";
+}
+
+.destroy-btn:hover {
+  background-color: #ff0202;
+}
