@@ -27,10 +27,19 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
     if @comment.update(comment_params)
-      redirect_to root_path
+      redirect_to "/posts/#{@comment.post.id}"
     else
       render :edit
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:post_id])
+    @comment = Comment.find(params[:id])
+    return unless current_user.id == @comment.user_id
+    
+    @comment.destroy
+    redirect_to "/posts/#{@comment.post.id}"
   end
 
   private

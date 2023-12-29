@@ -8,6 +8,8 @@
       
       <%= form.submit "編集完了" %>
     <% end %>
+      <%= link_to '削除', post_comment_path, method: :delete, class: "destroy-btn" %>
+
   </div>
 </div>
 
