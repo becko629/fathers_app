@@ -32,11 +32,7 @@
     </div>
            <div class="button">
             <div id="like-btn<%= @post.id %>">
-              <% if user_signed_in? && post.liked_by?(current_user)%>
-               <%= link_to 'お気に入り♥',post_likes_path(@post.id), method: :delete, class: "button-064" %>
-              <%else%>
-               <%= link_to 'お気に入り♡',post_likes_path(@post.id),method: :post, class: "button-065"%>
-              <% end %>
+             <%= render partial: "shared/like", locals: { post: @post } %>
             </div>
             <%= link_to 'コメント', new_post_comment_path(@post.id), class: "button-002" %>
      <%# コメント一覧表示%>
