@@ -31,7 +31,9 @@
           </div>
     </div>
            <div class="button">
-            <%= link_to 'お気に入り', "#", class: "button-064" %>
+            <div id="like-btn<%= @post.id %>">
+             <%= render partial: "shared/like", locals: { post: @post } %>
+            </div>
             <%= link_to 'コメント', new_post_comment_path(@post.id), class: "button-002" %>
      <%# コメント一覧表示%>
   <div class="comments">

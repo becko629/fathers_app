@@ -1,0 +1,5 @@
+<% if user_signed_in? && post.liked_by?(current_user)%>
+   <%= link_to 'お気に入り♥',post_likes_path(@post.id), method: :delete, class: "button-064", remote: true%>
+<%else%>
+   <%= link_to 'お気に入り♡',post_likes_path(@post.id),method: :post, class: "button-065", remote: true%>
+<% end %>
